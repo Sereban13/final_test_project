@@ -12,5 +12,5 @@ export default defineConfig({
       assets: '/src/assets',
     },
   },
-  base: '/final_test_project/',
+  base: '/final_test_project',
 });
