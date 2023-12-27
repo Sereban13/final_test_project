@@ -1,66 +1,13 @@
-// import { Container, Block, Title } from './ThirdPage.styled';
-import faker from 'faker';
-import LineChart from '../../components/LineChart/LineChart';
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend,
-} from 'chart.js';
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend
-);
+import Dashboard from '../../components/Dashboard/Dashboard';
+// import { WaterChart } from '../../components/MainWater.jsx/MainWater';
 
-const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-
-const options = {
-  responsive: true,
-  plugins: {
-    legend: {
-      position: 'top',
-    },
-    title: {
-      display: true,
-      text: 'Chart.js Line Chart',
-    },
-  },
-};
-
-const data = {
-  labels,
-  datasets: [
-    {
-      label: 'Dataset 1',
-      data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
-      borderColor: 'rgb(255, 99, 132)',
-      backgroundColor: 'rgba(255, 99, 132, 0.5)',
-    },
-    {
-      label: 'Dataset 2',
-      data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
-      borderColor: 'rgb(53, 162, 235)',
-      backgroundColor: 'rgba(53, 162, 235, 0.5)',
-    },
-  ],
-};
-
-const ThirdPage = () => {
+const DashboardPage = () => {
   return (
-    <div>
-      <h1>React Chart.js 2 Example</h1>
-      <LineChart options={options} data={data} />
-    </div>
+    <>
+      {/* <WaterChart /> */}
+      <Dashboard />
+    </>
   );
 };
 
-export default ThirdPage;
+export default DashboardPage;

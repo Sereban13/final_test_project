@@ -2,10 +2,14 @@ import { Link } from 'react-router-dom';
 import styled from '@emotion/styled';
 
 export const Container = styled.div`
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 500px;
+  padding-top: 500px; */
+  width: 500px;
+  height: 300px;
+  border: 1px solid black;
+  margin: 10px;
 `;
 export const Block = styled.div`
   text-align: center;
